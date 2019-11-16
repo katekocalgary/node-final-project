@@ -1,3 +1,6 @@
+# AWS deploy URL
+http://35.183.99.168:3000/posts
+
 # node-final-project
  - post list view
  - post detail view
