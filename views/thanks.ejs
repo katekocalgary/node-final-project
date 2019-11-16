@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+    <body>
+        <!-- Include header  -->
+        <%- include partials/header %>
+        <!-- Displays the thanks message-->
+            <section class="thanks">
+                <div class="centerMessage">
+                    <h2>Congratulation, </strong><%= messages.subSuccessMsg %>! </strong></h2>
+                    <p>You have successfully signed up for sharing our story 'T.I.L'.</p>
+
+                </div>
+                <div>
+                    <a href="/posts" title="TIL" class="blinkbtn">Go to T.I.L </a>
+                </div>
+            </section>
+        </div>
+    <!-- Include footer -->
+    <%- include partials/footer %>
+    </body>
+</html>

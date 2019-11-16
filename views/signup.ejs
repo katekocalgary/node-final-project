@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+    <body>
+    <!-- Include header  -->
+    <%- include partials/header %>
+    <!-- Displays the submitted name and email START-->
+            <section class="signup">
+                <h1>Sign Up Now</h1>
+                <!-- Display signup fail message -->
+                <% if (messages.subFailMsg) { %>
+                <div class="subMessage">
+                    <p class="message-text"> <%= messages.subFailMsg %></p>
+                    <div id="message-close"><a href="#"><img src="./img/close.svg"></a></div>
+                </div>
+                <% } %>
+                <!-- signup form area -->
+                <form action="../users" method="post">
+                    <fieldset>
+                        <legend class="legend">Share our T.I.L : Today I Learned</legend>
+                        <div class="form">
+                            <div class="email">
+                                <label for="email">E-mail(ID)</label>
+                                <input id="email" type="email" name="email" placeholder="E-mail" maxlength="50" required>
+                            </div>
+
+                            <div class="password">
+                                <label for="password">Password</label>
+                                <input id="password" type="password" name="password" placeholder="more than 6 charaters" required minlength="6" maxlength="20"
+                                    required>
+                            </div>
+                            <div class="name">
+                                <label for="name">Name</label>
+                                <input id="name" type="text" name="name" placeholder="Name" required minlength="4" maxlength="20"
+                                    required>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" name="adult" value="true" required> I confirm that I am over 18 years old and
+                                I accept adult contents.
+                            </div>
+                            <div class="button">
+                                <button type="submit" id="submit" class="submit" value="submit"> Sign up</button>
+                            </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+    <!-- Include footer -->
+    <%- include partials/footer %>
+    <!-- Include js file link for closing message layer-->
+    <%- include partials/layerCloseJS %>
+    </body>
+</html>

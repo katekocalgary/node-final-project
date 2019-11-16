@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <div class="container">
+                <a href="/" title="home">
+                    <div class="logo"></div>
+                </a>
+                <!-- display Navigation data START -->
+                <ul>
+                    <li><a href="/posts" title="TIL"> T.I.L</a></li>
+                    <li><a href="/signin" title="sign in"> Sign In</a></li>
+                    <li><a href="/users" title="sign up"> Sign Up</a></li>
+                </ul>
+                <!-- display Navigation data END -->
+            </div>
+        </nav>
+        <!-- Body contents area -->
+        <section class="section">
+            <div class="container">
+                <div class="intro">
+                    <h1>Kate Ko is..</h1>
+                    <p>10 years experience as a Web Designer and Project Manager, PMP certified, worked in the mobile
+                        and web
+                        industry.<br> Skilled in UX strategy experience, including: requirement gathering, prototyping,
+                        project
+                        management, <br> and quality assurance. Strong problem-solving abilities. Can work under
+                        pressure within
+                        challenging environments.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class='card-row' id='content'>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Include js file link for displaying Tile UI and contents-->
+    <%- include partials/mainJS %>
+    <!-- Include footer -->
+    <%- include partials/footer %>
+</body>
+</html>

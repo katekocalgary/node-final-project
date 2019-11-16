@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %> </title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<!-- Include header  -->
+<%- include partials/header %>
+    <!-- Body contents area -->
+    <section class="section">
+        <div class="container">
+            <div class="intro">
+                <h1>T.I.L : Today I Learned</h1>
+                <div class="blinkbtndiv"><a class="blinkbtn" href='/posts/post-form'>Write Post</a></div>
+            </div>
+        </div>
+        <!-- Display subscription success message -->
+        <% if (messages.postSuccessMsg) { %>
+        <div class="subMessage">
+            <p class="message-text"> <%= messages.postSuccessMsg %></p>
+            <div id="message-close"><a href="#"><img src="./img/close.svg"></a></div>
+        </div>
+        <% } %>
+        <div class="container">
+            <div class='post'>
+                <div class='post-box' id='post-detail'>
+                    <div class='title'><h2><%= posts.title %></h2></div>
+                    <div class='summary'><p><%= posts.summary %></p></div>
+                    <div class='body'><p><%= posts.body %></p></div>
+                    <div class='author'><%= posts.author %></div>
+                    <div class='date'><%= posts.date %></div>
+                    <div class="slinkbtndiv"> <a class="slinkbtn" href="/posts"> Post List </a></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </div>
+<!-- Include footer -->
+<%- include partials/footer %>
+</body>
+</html>

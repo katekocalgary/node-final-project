@@ -1,0 +1,24 @@
+    <!-- Header area -->
+    <div class = "wrapper">
+        <nav class="navbar">
+            <div class="container">
+                <a href = "/" title="home"><div class="logo"></div></a>
+                <!-- display Navigation data START -->
+                <ul>
+                    <% if (isAuthenticated) { %>
+                    <li> Welcome, <strong><%= currentUser.name %>!</strong></a></li>
+                    <li><a href="/posts" title ="TIL"> T.I.L</a></li>
+                    <li><a href="/signin/signout" title ="sign out"> Sign out</a></li>
+                    
+                    <% } else { %>
+                    <li><a href="/posts" title ="TIL"> T.I.L</a></li>
+                    <li><a href="/signin" title ="sign in"> Sign In</a></li>
+                    <li><a href="/users" title ="sign up"> Sign Up</a></li>
+                    <% } %>
+
+                </ul>
+                <!-- display Navigation data END -->
+            </div>
+        </nav>
+
+
